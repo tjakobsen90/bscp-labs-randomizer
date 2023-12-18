@@ -6,7 +6,13 @@
 
 import argparse
 import requests
+import logging
+import time
+import json
+import sys
 from bs4 import BeautifulSoup
+
+url_main = "https://portswigger.net"
 
 
 parser = argparse.ArgumentParser(
@@ -14,18 +20,21 @@ parser = argparse.ArgumentParser(
                     description='What the program does',
                     epilog='Text at the bottom of help')
 
-parser.add_argument('filename')           # positional argument
+parser.add_argument('action')           # positional argument
 parser.add_argument('-c', '--count')      # option that takes a value
 parser.add_argument('-v', '--verbose',
                     action='store_true')  # on/off flag
+#args = parser.parse_args()
 
-# Define the URL you want to scrape
-URL = "https://portswigger.net"
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[logging.FileHandler("debug.log"), logging.StreamHandler(sys.stdout)],
+)
 
 def main():
-    args = parser.parse_args()
-    print(args.filename, args.count, args.verbose)
-    pass
+    update()
+    quit()
 
 def list():
     # List all the imported labs
@@ -36,23 +45,42 @@ def random():
     pass
 
 def update():
-    # Send an HTTP GET request to the URL
-    res = requests.get(URL+'/web-security/all-labs')
-    labLinks = list()
-    # Check if the request was successful (status code 200)
-    if res.status_code == 200:
-        # Parse the HTML content of the page using Beautiful Soup
-        soup = BeautifulSoup(res.text, 'html.parser')
-        labElements = soup.find_all(class_="widgetcontainer-lab-link")
-        print(f"Count of Lab Elements: {len(labElements)}")
+    logging.info("Get some coffee, this will take a while")
 
-        for e in labElements:
-            link = URL + e.find_all('a')[0].get('href')
-            labLinks.append(link)
-        print(f"Count of Lab Links: {len(labElements)}")
-        print(labLinks)
+    url_labs = f"{url_main}/web-security/all-labs"
+    r_labs = requests.get(url_labs)
+
+    link_labs = []
+    if r_labs.status_code == 200:
+        soup = BeautifulSoup(r_labs.text, 'html.parser')
+        elements = soup.find_all(class_="widgetcontainer-lab-link")
+        for element in elements:
+            link_labs.append(element.find_all('a')[0].get('href'))
     else:
-        print("Failed to retrieve the web page. Status code:", res.status_code)
+        logging.error(f"{url_labs} status code: {r_labs.status_code}")
+        return
+
+    link_launches = []
+    for link_lab in link_labs:
+        r_launches = requests.get(f"{url_main}{link_lab}")
+        if r_launches.status_code == 200:
+            soup = BeautifulSoup(r_launches.text, 'html.parser')
+            elements = soup.find_all('a', class_="button-orange")
+            for element in elements:
+                link_launches.append(element['href'])
+        else:
+            logging.error(f"{link_lab} status code: {r_launches.status_code}")
+            return
+        # I don't want an angry PortSwigger
+        time.sleep(1)
+
+    dict_launches = {}
+    number = 0
+    for link_launch in link_launches:
+        dict_launches[number] = f"{url_main}{link_launch}"
+        number += 1
+    with open("database.links", "w") as file:
+        json.dump(dict_launches , file) 
 
 if __name__ == "__main__":
     main()
