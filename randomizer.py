@@ -2,7 +2,12 @@
 # https://github.com/tjakobsen90/bscp-mystery-lab-randomizer
 
 # Only randomize mystery labs that are applicable for the BSCP exam
-# For example, this does not include the labs where you need to get the leather jacket for 1337 dollars
+# For example, this does not include the labs where you need to get the leather jacket
+# Do keep in mind that I strongly recommend to do these 'skipped' labs regardless
+
+# To do:
+# - Vuln categories
+# - Exam step categories
 
 import argparse
 import requests
@@ -14,9 +19,9 @@ import random
 from bs4 import BeautifulSoup
 
 logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[logging.FileHandler("debug.log"), logging.StreamHandler(sys.stdout)],
+    level = logging.INFO,
+    format = "%(asctime)s [%(levelname)s] %(message)s",
+    handlers = [logging.FileHandler("debug.log"), logging.StreamHandler(sys.stdout)],
 )
 
 parser = argparse.ArgumentParser(prog="ProgramName", description="What the program does", epilog="Text at the bottom of help")
@@ -24,6 +29,7 @@ parser.add_argument("option", help="random, list or update")
 args = parser.parse_args()
 
 def main(args):
+    logging.info("BSCP Labs Randomizer")
     actions = {
         "random": {"func": random_lab},
         "list": {"func": list},
@@ -54,16 +60,20 @@ def random_lab():
     #     url_random[i] = encode_all(url_random[i])
     #     url_encoded = "%2f".join(map(str, url_random))
     # logging.info(f"The URL is: {url_encoded}")
-    # return True
+    return True
 
 def list():
     try:
         with open("database.links", "r") as file:
-            pass
+            urls = json.load(file)
     except Exception as e:
         logging.warning("Database file unavailable, did you create it with 'update'?")
         logging.warning(f"Message: {e}")
         return False
+
+    logging.info("The current entries in the database are:")
+    for number, url in urls.items():
+        logging.info(f"{number}: {url}")
     return True
 
 def update():
