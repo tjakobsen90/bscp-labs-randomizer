@@ -64,3 +64,271 @@ The current entries in the database are:
 4: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-non-oracle
 5: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-oracle
 Good luck!
+2023-12-20 23:33:33,306 [INFO] BSCP Labs Randomizer
+2023-12-20 23:34:00,190 [INFO] BSCP Labs Randomizer
+2023-12-20 23:34:59,872 [INFO] BSCP Labs Randomizer
+2023-12-20 23:35:47,799 [INFO] BSCP Labs Randomizer
+2023-12-20 23:35:47,799 [INFO] Good luck!
+2023-12-20 23:36:24,623 [INFO] BSCP Labs Randomizer
+2023-12-20 23:36:56,311 [INFO] BSCP Labs Randomizer
+2023-12-20 23:36:56,311 [INFO] Good luck!
+2023-12-20 23:37:08,631 [INFO] BSCP Labs Randomizer
+2023-12-20 23:37:08,631 [INFO] Good luck!
+2023-12-20 23:37:28,941 [INFO] BSCP Labs Randomizer
+2023-12-20 23:37:28,942 [INFO] Good luck!
+2023-12-20 23:38:17,473 [INFO] BSCP Labs Randomizer
+2023-12-20 23:38:17,474 [INFO] Good luck!
+2023-12-20 23:38:19,774 [INFO] BSCP Labs Randomizer
+2023-12-20 23:38:19,774 [INFO] Good luck!
+2023-12-20 23:38:20,808 [INFO] BSCP Labs Randomizer
+2023-12-20 23:38:20,809 [INFO] Good luck!
+2023-12-20 23:38:39,054 [INFO] BSCP Labs Randomizer
+2023-12-20 23:38:50,150 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:07,173 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:46,359 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:46,359 [INFO] Good luck!
+2023-12-20 23:39:47,622 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:47,622 [INFO] Good luck!
+2023-12-20 23:39:48,317 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:48,317 [INFO] Good luck!
+2023-12-20 23:39:48,896 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:48,896 [INFO] Good luck!
+2023-12-20 23:39:49,239 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:49,240 [INFO] Good luck!
+2023-12-20 23:39:49,675 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:49,676 [INFO] Good luck!
+2023-12-20 23:39:50,002 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:50,003 [INFO] Good luck!
+2023-12-20 23:39:50,376 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:50,376 [INFO] Good luck!
+2023-12-20 23:39:52,098 [INFO] BSCP Labs Randomizer
+2023-12-20 23:39:52,098 [INFO] Good luck!
+2023-12-20 23:40:20,099 [INFO] BSCP Labs Randomizer
+2023-12-20 23:40:28,099 [INFO] BSCP Labs Randomizer
+2023-12-20 23:40:34,625 [INFO] BSCP Labs Randomizer
+2023-12-20 23:41:29,831 [INFO] BSCP Labs Randomizer
+2023-12-20 23:41:30,683 [INFO] BSCP Labs Randomizer
+2023-12-20 23:41:31,775 [INFO] BSCP Labs Randomizer
+2023-12-20 23:41:53,825 [INFO] BSCP Labs Randomizer
+2023-12-20 23:41:59,280 [INFO] BSCP Labs Randomizer
+2023-12-20 23:42:10,560 [INFO] BSCP Labs Randomizer
+2023-12-20 23:42:40,494 [INFO] BSCP Labs Randomizer
+2023-12-20 23:43:58,924 [INFO] BSCP Labs Randomizer
+2023-12-20 23:43:58,925 [WARNING] Database file unavailable, did you create it with 'update'?
+2023-12-20 23:43:58,925 [WARNING] Message: 0
+2023-12-20 23:44:18,696 [INFO] BSCP Labs Randomizer
+2023-12-20 23:44:18,696 [WARNING] Database file unavailable, did you create it with 'update'?
+2023-12-20 23:44:18,696 [WARNING] Message: 0
+2023-12-20 23:44:51,714 [INFO] BSCP Labs Randomizer
+2023-12-20 23:44:51,714 [WARNING] Database file unavailable, did you create it with 'update'?
+2023-12-20 23:44:51,714 [WARNING] Message: 0
+2023-12-20 23:45:13,057 [INFO] BSCP Labs Randomizer
+2023-12-20 23:46:51,197 [INFO] BSCP Labs Randomizer
+2023-12-20 23:48:18,111 [INFO] BSCP Labs Randomizer
+2023-12-20 23:48:27,831 [INFO] BSCP Labs Randomizer
+2023-12-20 23:48:55,253 [INFO] BSCP Labs Randomizer
+2023-12-20 23:49:02,296 [INFO] BSCP Labs Randomizer
+2023-12-20 23:49:12,502 [INFO] BSCP Labs Randomizer
+2023-12-20 23:50:19,542 [INFO] BSCP Labs Randomizer
+2023-12-20 23:50:19,542 [INFO] Good luck!
+2023-12-20 23:50:51,625 [INFO] BSCP Labs Randomizer
+2023-12-20 23:50:51,626 [INFO] Good luck!
+2023-12-20 23:52:37,075 [INFO] BSCP Labs Randomizer
+2023-12-20 23:52:58,947 [INFO] BSCP Labs Randomizer
+2023-12-20 23:52:58,947 [INFO] Good luck!
+2023-12-20 23:53:10,814 [INFO] BSCP Labs Randomizer
+2023-12-20 23:53:10,815 [INFO] Good luck!
+2023-12-20 23:53:24,507 [INFO] BSCP Labs Randomizer
+2023-12-20 23:53:24,507 [INFO] Good luck!
+2023-12-20 23:54:29,299 [INFO] BSCP Labs Randomizer
+2023-12-20 23:54:29,300 [INFO] The URL is: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2flab-listing-database-contents-oracle
+2023-12-20 23:54:29,300 [INFO] Good luck!
+2023-12-20 23:54:51,071 [INFO] BSCP Labs Randomizer
+2023-12-20 23:54:51,072 [INFO] The URL is: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:54:51,072 [INFO] Good luck!
+2023-12-20 23:54:52,626 [INFO] BSCP Labs Randomizer
+2023-12-20 23:54:52,627 [INFO] The URL is: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%6c%69%73%74%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%63%6f%6e%74%65%6e%74%73%2d%6f%72%61%63%6c%65
+2023-12-20 23:54:52,627 [INFO] Good luck!
+2023-12-20 23:54:53,540 [INFO] BSCP Labs Randomizer
+2023-12-20 23:54:53,541 [INFO] The URL is: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:54:53,541 [INFO] Good luck!
+2023-12-20 23:54:54,575 [INFO] BSCP Labs Randomizer
+2023-12-20 23:54:54,575 [INFO] The URL is: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%6c%69%73%74%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%63%6f%6e%74%65%6e%74%73%2d%6e%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:54:54,575 [INFO] Good luck!
+2023-12-20 23:54:55,478 [INFO] BSCP Labs Randomizer
+2023-12-20 23:54:55,478 [INFO] The URL is: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%6c%69%73%74%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%63%6f%6e%74%65%6e%74%73%2d%6f%72%61%63%6c%65
+2023-12-20 23:54:55,478 [INFO] Good luck!
+2023-12-20 23:54:56,769 [INFO] BSCP Labs Randomizer
+2023-12-20 23:54:58,161 [INFO] BSCP Labs Randomizer
+2023-12-20 23:55:28,156 [INFO] BSCP Labs Randomizer
+2023-12-20 23:55:28,156 [INFO] The URL is: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6d%79%73%71%6c%2d%6d%69%63%72%6f%73%6f%66%74
+2023-12-20 23:55:28,156 [INFO] Good luck!
+2023-12-20 23:55:29,870 [INFO] BSCP Labs Randomizer
+2023-12-20 23:55:58,655 [INFO] BSCP Labs Randomizer
+2023-12-20 23:55:58,655 [INFO] The URL is: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6d%79%73%71%6c%2d%6d%69%63%72%6f%73%6f%66%74
+2023-12-20 23:55:58,655 [INFO] Good luck!
+2023-12-20 23:55:59,811 [INFO] BSCP Labs Randomizer
+2023-12-20 23:55:59,812 [INFO] The URL is: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:55:59,812 [INFO] Good luck!
+2023-12-20 23:56:00,543 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:00,544 [INFO] The URL is: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6d%79%73%71%6c%2d%6d%69%63%72%6f%73%6f%66%74
+2023-12-20 23:56:00,544 [INFO] Good luck!
+2023-12-20 23:56:01,150 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:01,151 [INFO] The URL is: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%6c%61%62%2d%6c%6f%67%69%6e%2d%62%79%70%61%73%73
+2023-12-20 23:56:01,151 [INFO] Good luck!
+2023-12-20 23:56:01,556 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:01,557 [INFO] The URL is: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%6c%69%73%74%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%63%6f%6e%74%65%6e%74%73%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:01,557 [INFO] Good luck!
+2023-12-20 23:56:01,957 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:01,957 [INFO] The URL is: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6d%79%73%71%6c%2d%6d%69%63%72%6f%73%6f%66%74
+2023-12-20 23:56:01,958 [INFO] Good luck!
+2023-12-20 23:56:02,682 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:02,683 [INFO] The URL is: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%6c%61%62%2d%6c%6f%67%69%6e%2d%62%79%70%61%73%73
+2023-12-20 23:56:02,683 [INFO] Good luck!
+2023-12-20 23:56:03,573 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:03,573 [INFO] The URL is: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:03,573 [INFO] Good luck!
+2023-12-20 23:56:04,977 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:04,978 [INFO] The URL is: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:04,978 [INFO] Good luck!
+2023-12-20 23:56:05,548 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:05,549 [INFO] The URL is: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:05,549 [INFO] Good luck!
+2023-12-20 23:56:05,972 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:05,973 [INFO] The URL is: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%6c%69%73%74%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%63%6f%6e%74%65%6e%74%73%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:05,973 [INFO] Good luck!
+2023-12-20 23:56:06,348 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:06,349 [INFO] The URL is: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%6c%61%62%2d%72%65%74%72%69%65%76%65%2d%68%69%64%64%65%6e%2d%64%61%74%61
+2023-12-20 23:56:06,349 [INFO] Good luck!
+2023-12-20 23:56:06,793 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:06,794 [INFO] The URL is: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%6c%61%62%2d%6c%6f%67%69%6e%2d%62%79%70%61%73%73
+2023-12-20 23:56:06,794 [INFO] Good luck!
+2023-12-20 23:56:07,139 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:07,139 [INFO] The URL is: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%6c%69%73%74%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%63%6f%6e%74%65%6e%74%73%2d%6e%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:07,139 [INFO] Good luck!
+2023-12-20 23:56:07,545 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:07,546 [INFO] The URL is: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%6c%69%73%74%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%63%6f%6e%74%65%6e%74%73%2d%6e%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:07,546 [INFO] Good luck!
+2023-12-20 23:56:07,907 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:07,908 [INFO] The URL is: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:07,908 [INFO] Good luck!
+2023-12-20 23:56:08,251 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:08,252 [INFO] The URL is: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:08,252 [INFO] Good luck!
+2023-12-20 23:56:08,573 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:08,573 [INFO] The URL is: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%6c%61%62%2d%6c%6f%67%69%6e%2d%62%79%70%61%73%73
+2023-12-20 23:56:08,574 [INFO] Good luck!
+2023-12-20 23:56:08,905 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:08,906 [INFO] The URL is: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6d%79%73%71%6c%2d%6d%69%63%72%6f%73%6f%66%74
+2023-12-20 23:56:08,906 [INFO] Good luck!
+2023-12-20 23:56:09,213 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:09,214 [INFO] The URL is: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%6c%69%73%74%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%63%6f%6e%74%65%6e%74%73%2d%6e%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:09,214 [INFO] Good luck!
+2023-12-20 23:56:09,513 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:09,513 [INFO] The URL is: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%6c%61%62%2d%72%65%74%72%69%65%76%65%2d%68%69%64%64%65%6e%2d%64%61%74%61
+2023-12-20 23:56:09,513 [INFO] Good luck!
+2023-12-20 23:56:09,812 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:09,813 [INFO] The URL is: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:09,813 [INFO] Good luck!
+2023-12-20 23:56:10,117 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:10,118 [INFO] The URL is: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6d%79%73%71%6c%2d%6d%69%63%72%6f%73%6f%66%74
+2023-12-20 23:56:10,118 [INFO] Good luck!
+2023-12-20 23:56:10,402 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:10,403 [INFO] The URL is: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%6c%61%62%2d%6c%6f%67%69%6e%2d%62%79%70%61%73%73
+2023-12-20 23:56:10,403 [INFO] Good luck!
+2023-12-20 23:56:10,681 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:10,682 [INFO] The URL is: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%71%75%65%72%79%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%76%65%72%73%69%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:10,682 [INFO] Good luck!
+2023-12-20 23:56:10,962 [INFO] BSCP Labs Randomizer
+2023-12-20 23:56:10,963 [INFO] The URL is: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2f%77%65%62%2d%73%65%63%75%72%69%74%79%2f%73%71%6c%2d%69%6e%6a%65%63%74%69%6f%6e%2f%65%78%61%6d%69%6e%69%6e%67%2d%74%68%65%2d%64%61%74%61%62%61%73%65%2f%6c%61%62%2d%6c%69%73%74%69%6e%67%2d%64%61%74%61%62%61%73%65%2d%63%6f%6e%74%65%6e%74%73%2d%6e%6f%6e%2d%6f%72%61%63%6c%65
+2023-12-20 23:56:10,963 [INFO] Good luck!
+2023-12-20 23:57:42,502 [INFO] BSCP Labs Randomizer
+2023-12-20 23:57:42,502 [INFO] The current entries in the database are:
+2023-12-20 23:57:42,502 [INFO] 0: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2fweb-security%2fsql-injection%2flab-retrieve-hidden-data
+2023-12-20 23:57:42,502 [INFO] 1: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2fweb-security%2fsql-injection%2flab-login-bypass
+2023-12-20 23:57:42,502 [INFO] 2: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-oracle
+2023-12-20 23:57:42,502 [INFO] 3: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-mysql-microsoft
+2023-12-20 23:57:42,503 [INFO] 4: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-non-oracle
+2023-12-20 23:57:42,503 [INFO] 5: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-oracle
+2023-12-20 23:57:42,503 [INFO] Good luck!
+2023-12-20 23:57:46,872 [INFO] BSCP Labs Randomizer
+2023-12-21 00:10:23,378 [INFO] BSCP Labs Randomizer
+2023-12-21 00:10:23,378 [INFO] Get some coffee, this will take a while
+2023-12-21 00:15:51,351 [INFO] BSCP Labs Randomizer
+2023-12-21 00:15:51,351 [INFO] Get some coffee, this will take a while
+2023-12-21 00:16:05,632 [INFO] Good luck!
+2023-12-21 00:16:18,896 [INFO] BSCP Labs Randomizer
+2023-12-21 00:17:39,248 [INFO] BSCP Labs Randomizer
+2023-12-21 00:18:01,341 [INFO] BSCP Labs Randomizer
+2023-12-21 00:18:01,342 [INFO] The current entries in the database are:
+2023-12-21 00:18:01,342 [INFO] 0: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2fweb-security%2fsql-injection%2flab-retrieve-hidden-data
+2023-12-21 00:18:01,342 [INFO] 1: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2fweb-security%2fsql-injection%2flab-login-bypass
+2023-12-21 00:18:01,342 [INFO] 2: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-oracle
+2023-12-21 00:18:01,342 [INFO] 3: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-mysql-microsoft
+2023-12-21 00:18:01,342 [INFO] 4: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-non-oracle
+2023-12-21 00:18:01,342 [INFO] 5: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-oracle
+2023-12-21 00:18:01,342 [INFO] Good luck!
+2023-12-21 00:19:09,740 [INFO] BSCP Labs Randomizer
+2023-12-21 00:19:09,740 [INFO] Get some coffee, this will take a while
+2023-12-21 00:19:27,067 [INFO] Good luck!
+2023-12-21 00:19:30,364 [INFO] BSCP Labs Randomizer
+2023-12-21 00:19:30,364 [INFO] The current entries in the database are:
+2023-12-21 00:19:30,364 [INFO] 0: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2fweb-security%2fsql-injection%2flab-retrieve-hidden-data
+2023-12-21 00:19:30,364 [INFO] 1: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2fweb-security%2fsql-injection%2flab-login-bypass
+2023-12-21 00:19:30,364 [INFO] 2: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-oracle
+2023-12-21 00:19:30,364 [INFO] 3: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-mysql-microsoft
+2023-12-21 00:19:30,364 [INFO] 4: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-non-oracle
+2023-12-21 00:19:30,364 [INFO] 5: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-oracle
+2023-12-21 00:19:30,364 [INFO] Good luck!
+2023-12-21 00:19:38,330 [INFO] BSCP Labs Randomizer
+2023-12-21 00:19:38,331 [INFO] Get some coffee, this will take a while
+2023-12-21 00:19:52,925 [INFO] Good luck!
+2023-12-21 00:20:05,180 [INFO] BSCP Labs Randomizer
+2023-12-21 00:20:05,180 [INFO] The current entries in the database are:
+2023-12-21 00:20:05,181 [INFO] 0: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2fweb-security%2fsql-injection%2flab-retrieve-hidden-data
+2023-12-21 00:20:05,181 [INFO] 1: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2fweb-security%2fsql-injection%2flab-login-bypass
+2023-12-21 00:20:05,181 [INFO] 2: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-oracle
+2023-12-21 00:20:05,181 [INFO] 3: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-mysql-microsoft
+2023-12-21 00:20:05,181 [INFO] 4: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-non-oracle
+2023-12-21 00:20:05,181 [INFO] 5: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-oracle
+2023-12-21 00:20:05,181 [INFO] Good luck!
+2023-12-21 00:23:14,489 [INFO] BSCP Labs Randomizer
+2023-12-21 00:23:14,489 [INFO] Get some coffee, this will take a while
+2023-12-21 00:23:21,865 [INFO] Good luck!
+2023-12-21 00:23:23,696 [INFO] BSCP Labs Randomizer
+2023-12-21 00:23:23,697 [INFO] The current entries in the database are:
+2023-12-21 00:23:23,697 [INFO] 0: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2fweb-security%2fsql-injection%2flab-retrieve-hidden-data
+2023-12-21 00:23:23,697 [INFO] 1: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2fweb-security%2fsql-injection%2flab-login-bypass
+2023-12-21 00:23:23,697 [INFO] 2: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-mysql-microsoft
+2023-12-21 00:23:23,697 [INFO] Good luck!
+2023-12-21 00:23:44,526 [INFO] BSCP Labs Randomizer
+2023-12-21 00:23:44,526 [INFO] The current entries in the database are:
+2023-12-21 00:23:44,526 [INFO] 0: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2fweb-security%2fsql-injection%2flab-retrieve-hidden-data
+2023-12-21 00:23:44,527 [INFO] 1: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2fweb-security%2fsql-injection%2flab-login-bypass
+2023-12-21 00:23:44,527 [INFO] 2: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-mysql-microsoft
+2023-12-21 00:23:44,527 [INFO] Good luck!
+2023-12-21 00:23:46,401 [INFO] BSCP Labs Randomizer
+2023-12-21 00:23:46,401 [INFO] Get some coffee, this will take a while
+2023-12-21 00:24:00,406 [INFO] Good luck!
+2023-12-21 00:24:04,022 [INFO] BSCP Labs Randomizer
+2023-12-21 00:24:04,022 [INFO] The current entries in the database are:
+2023-12-21 00:24:04,022 [INFO] 0: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2fweb-security%2fsql-injection%2flab-retrieve-hidden-data
+2023-12-21 00:24:04,022 [INFO] 1: https://portswigger.net/academy/labs/launch/befc0f5ddbc0e32a7adc4c9d4d286582f462f70bf32a8d5df15489d679dcd5c9?referrer=%2fweb-security%2fsql-injection%2flab-login-bypass
+2023-12-21 00:24:04,022 [INFO] 2: https://portswigger.net/academy/labs/launch/974bd9df06352f8b59c679f854a5bc7e3db6c7fb83f72db653509252a6d47e28?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-oracle
+2023-12-21 00:24:04,022 [INFO] 3: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-mysql-microsoft
+2023-12-21 00:24:04,022 [INFO] 4: https://portswigger.net/academy/labs/launch/81986add1fa6ec438867539cc2f562f01dcf9faf6a0b82766269c3dbeef30b00?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-non-oracle
+2023-12-21 00:24:04,022 [INFO] 5: https://portswigger.net/academy/labs/launch/de4256d42cc604a2a3f7e792c5fff88df1712f1537cd506ed2537efedbd4c665?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-listing-database-contents-oracle
+2023-12-21 00:24:04,022 [INFO] Good luck!
+2023-12-21 00:25:01,279 [INFO] BSCP Labs Randomizer
+2023-12-21 00:25:01,280 [INFO] Get some coffee, this will take a while
+2023-12-21 00:25:08,792 [INFO] Good luck!
+2023-12-21 00:25:10,554 [INFO] BSCP Labs Randomizer
+2023-12-21 00:25:10,555 [INFO] The current entries in the database are:
+2023-12-21 00:25:10,555 [INFO] 0: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2fweb-security%2fsql-injection%2flab-retrieve-hidden-data
+2023-12-21 00:25:10,555 [INFO] 1: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-mysql-microsoft
+2023-12-21 00:25:10,555 [INFO] Good luck!
+2023-12-21 00:30:00,282 [INFO] BSCP Labs Randomizer
+2023-12-21 00:30:00,283 [INFO] The current entries in the database are:
+2023-12-21 00:30:00,283 [INFO] 0: https://portswigger.net/academy/labs/launch/d9a071d8264e85184722707ff5747bbbd77963967d1d01f1b22f5dd8252f9767?referrer=%2fweb-security%2fsql-injection%2flab-retrieve-hidden-data
+2023-12-21 00:30:00,283 [INFO] 1: https://portswigger.net/academy/labs/launch/13e48d1949abb8793e11da34ed06a5811ea3a9b2be0501a5e9f0deb255d37406?referrer=%2fweb-security%2fsql-injection%2fexamining-the-database%2flab-querying-database-version-mysql-microsoft
+2023-12-21 00:30:00,283 [INFO] Good luck!

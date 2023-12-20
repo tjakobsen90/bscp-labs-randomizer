@@ -24,20 +24,24 @@ logging.basicConfig(
     handlers = [logging.FileHandler("debug.log"), logging.StreamHandler(sys.stdout)],
 )
 
-parser = argparse.ArgumentParser(prog="ProgramName", description="What the program does", epilog="Text at the bottom of help")
+parser = argparse.ArgumentParser(prog="randomizer", description="Returns a random BSCP lab that is applicable for the BSCP exam")
 parser.add_argument("option", help="random, list or update")
 args = parser.parse_args()
+
+blacklist = [
+    "oracle",
+    "bypass"
+]
 
 def main(args):
     logging.info("BSCP Labs Randomizer")
     actions = {
         "random": {"func": random_lab},
         "list": {"func": list},
-        "update": {"func": update},
+        "update": {"func": update },
     }
-    result = actions.get(args.option)["func"]()
 
-    if result:
+    if actions.get(args.option)["func"]():
         logging.info("Good luck!")
         quit()
     else:
@@ -51,15 +55,14 @@ def random_lab():
         logging.warning("Database file unavailable, did you create it with 'update'?")
         logging.warning(f"Message: {e}")
         return False
-    print(urls)
-    print(type(urls))
-    res = random_number, random_url = random.choice(list(urls.items()))
-    print(random_url)
-    #.value())#.split("%2f")
-    # for i in range(1, 4):
-    #     url_random[i] = encode_all(url_random[i])
-    #     url_encoded = "%2f".join(map(str, url_random))
-    # logging.info(f"The URL is: {url_encoded}")
+
+    # random needs improvement
+    url_random = random.sample(urls.items(), 1)[0][1].split("%2f")
+    for i in range(1, len(url_random)):
+        url_random[i] = encode_all(url_random[i])
+        url_encoded = "%2f".join(map(str, url_random))
+    logging.info(f"The URL is: {url_encoded}")
+
     return True
 
 def list():
@@ -74,6 +77,7 @@ def list():
     logging.info("The current entries in the database are:")
     for number, url in urls.items():
         logging.info(f"{number}: {url}")
+
     return True
 
 def update():
@@ -81,33 +85,34 @@ def update():
 
     url_main = "https://portswigger.net"
 
-    url_labs = f"{url_main}/web-security/all-labs"
-    r_labs = requests.get(url_labs)
-    link_labs = []
-    numb = 0
+    labs_urls = f"{url_main}/web-security/all-labs"
+    r_labs = requests.get(labs_urls)
+    labs_links = []
     if r_labs.status_code == 200:
         soup = BeautifulSoup(r_labs.text, "html.parser")
         elements = soup.find_all(class_="widgetcontainer-lab-link")
         for element in elements:
-            link_labs.append(element.find_all("a")[0].get("href"))
-            if numb == 5:
-                break
-            numb += 1
+            labs_links.append(element.find_all("a")[0].get("href"))
     else:
-        logging.error(f"The URL {url_labs} is unavailable")
+        logging.error(f"The URL {labs_urls} is unavailable")
         logging.error(f"Status code: {r_labs.status_code}")
         return False
 
-    link_launches = []
-    for link_lab in link_labs:
-        r_launches = requests.get(f"{url_main}{link_lab}")
+    white_links = []
+    for lab in labs_links:
+        if not any(substring in lab for substring in blacklist):
+            white_links.append(lab)
+
+    launches = []
+    for white in white_links:
+        r_launches = requests.get(f"{url_main}{white}")
         if r_launches.status_code == 200:
             soup = BeautifulSoup(r_launches.text, "html.parser")
             elements = soup.find_all("a", class_="button-orange")
             for element in elements:
-                link_launches.append(element["href"])
+                launches.append(element["href"])
         else:
-            logging.error(f"The URL {link_lab} is unavailable")
+            logging.error(f"The URL {white} is unavailable")
             logging.error(f"Status code: {r_launches.status_code}")
             return False
         # I don"t want an angry PortSwigger
@@ -115,8 +120,8 @@ def update():
 
     dict_launches = {}
     number = 0
-    for link_launch in link_launches:
-        dict_launches[number] = f"{url_main}{link_launch}"
+    for launch in launches:
+        dict_launches[number] = f"{url_main}{launch}"
         number += 1
     try:
         with open("database.links", "w") as file:
@@ -125,6 +130,7 @@ def update():
         logging.error("Can't create database file")
         logging.error(f"Message: {e}")
         return False
+
     return True
 
 
