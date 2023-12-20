@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# https://github.com/tjakobsen90/bscp-mystery-lab-randomizer
+# https://github.com/tjakobsen90/bscp-labs-randomizer
 
 # Only randomize mystery labs that are applicable for the BSCP exam
 # For example, this does not include the labs where you need to get the leather jacket
