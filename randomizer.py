@@ -8,6 +8,7 @@
 # To do:
 # - Vuln categories
 # - Exam step categories
+# - Keep track of last X
 
 import argparse
 import requests
@@ -28,11 +29,6 @@ parser = argparse.ArgumentParser(prog="randomizer", description="Returns a rando
 parser.add_argument("option", help="random, list or update")
 args = parser.parse_args()
 
-blacklist = [
-    "oracle",
-    "bypass"
-]
-
 def main(args):
     logging.info("BSCP Labs Randomizer")
     actions = {
@@ -49,7 +45,7 @@ def main(args):
 
 def random_lab():
     try:
-        with open("database.links", "r") as file:
+        with open("database.dict", "r") as file:
             urls = json.load(file)
     except Exception as e:
         logging.warning("Database file unavailable, did you create it with 'update'?")
@@ -62,12 +58,13 @@ def random_lab():
         url_random[i] = encode_all(url_random[i])
         url_encoded = "%2f".join(map(str, url_random))
     logging.info(f"The URL is: {url_encoded}")
+    logging.info("Make sure you are logged in, copy/paste the URL to start")
 
     return True
 
 def list():
     try:
-        with open("database.links", "r") as file:
+        with open("database.dict", "r") as file:
             urls = json.load(file)
     except Exception as e:
         logging.warning("Database file unavailable, did you create it with 'update'?")
@@ -88,31 +85,44 @@ def update():
     labs_urls = f"{url_main}/web-security/all-labs"
     r_labs = requests.get(labs_urls)
     labs_links = []
+    numb = 0
     if r_labs.status_code == 200:
         soup = BeautifulSoup(r_labs.text, "html.parser")
         elements = soup.find_all(class_="widgetcontainer-lab-link")
+        
         for element in elements:
+            if numb == 5:
+                break
             labs_links.append(element.find_all("a")[0].get("href"))
+            numb += 1
     else:
         logging.error(f"The URL {labs_urls} is unavailable")
         logging.error(f"Status code: {r_labs.status_code}")
         return False
 
-    white_links = []
+    try:
+        with open("deny.list", "r") as file:
+            denylist = file.read().splitlines()
+    except Exception as e:
+        logging.warning("Deny file unavailable")
+        logging.warning(f"Message: {e}")
+        return False
+
+    allowlist = []
     for lab in labs_links:
-        if not any(substring in lab for substring in blacklist):
-            white_links.append(lab)
+        if not any(substring in lab for substring in denylist):
+            allowlist.append(lab)
 
     launches = []
-    for white in white_links:
-        r_launches = requests.get(f"{url_main}{white}")
+    for allow in allowlist:
+        r_launches = requests.get(f"{url_main}{allow}")
         if r_launches.status_code == 200:
             soup = BeautifulSoup(r_launches.text, "html.parser")
             elements = soup.find_all("a", class_="button-orange")
             for element in elements:
                 launches.append(element["href"])
         else:
-            logging.error(f"The URL {white} is unavailable")
+            logging.error(f"The URL {allow} is unavailable")
             logging.error(f"Status code: {r_launches.status_code}")
             return False
         # I don"t want an angry PortSwigger
@@ -124,7 +134,7 @@ def update():
         dict_launches[number] = f"{url_main}{launch}"
         number += 1
     try:
-        with open("database.links", "w") as file:
+        with open("database.dict", "w") as file:
             json.dump(dict_launches , file)
     except Exception as e:
         logging.error("Can't create database file")
