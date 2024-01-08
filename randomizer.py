@@ -5,6 +5,8 @@
 # For example, this does not include the labs where you need to get the leather jacket
 # Do keep in mind that I strongly recommend to do these 'skipped' labs regardless
 
+# Formatting is done in black: https://pypi.org/project/black/
+
 # To do:
 # - Vuln categories
 # - Exam step categories
@@ -20,21 +22,25 @@ import random
 from bs4 import BeautifulSoup
 
 logging.basicConfig(
-    level = logging.INFO,
-    format = "%(asctime)s [%(levelname)s] %(message)s",
-    handlers = [logging.FileHandler("debug.log"), logging.StreamHandler(sys.stdout)],
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)],
 )
 
-parser = argparse.ArgumentParser(prog="randomizer", description="Returns a random BSCP lab that is applicable for the BSCP exam")
+parser = argparse.ArgumentParser(
+    prog="randomizer",
+    description="Returns a random BSCP lab that is applicable for the BSCP exam",
+)
 parser.add_argument("option", help="random, list or update")
 args = parser.parse_args()
+
 
 def main(args):
     logging.info("BSCP Labs Randomizer")
     actions = {
         "random": {"func": random_lab},
         "list": {"func": list},
-        "update": {"func": update },
+        "update": {"func": update},
     }
 
     if actions.get(args.option)["func"]():
@@ -42,6 +48,7 @@ def main(args):
         quit()
     else:
         quit()
+
 
 def random_lab():
     try:
@@ -62,6 +69,7 @@ def random_lab():
 
     return True
 
+
 def list():
     try:
         with open("database.dict", "r") as file:
@@ -77,6 +85,7 @@ def list():
 
     return True
 
+
 def update():
     logging.info("Get some coffee, this will take a while")
 
@@ -89,7 +98,7 @@ def update():
     if r_labs.status_code == 200:
         soup = BeautifulSoup(r_labs.text, "html.parser")
         elements = soup.find_all(class_="widgetcontainer-lab-link")
-        
+
         for element in elements:
             if numb == 5:
                 break
@@ -135,7 +144,7 @@ def update():
         number += 1
     try:
         with open("database.dict", "w") as file:
-            json.dump(dict_launches , file)
+            json.dump(dict_launches, file)
     except Exception as e:
         logging.error("Can't create database file")
         logging.error(f"Message: {e}")
@@ -146,6 +155,7 @@ def update():
 
 def encode_all(string):
     return "".join("%{0:0>2x}".format(ord(char)) for char in string)
+
 
 if __name__ == "__main__":
     main(args)
