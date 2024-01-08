@@ -8,6 +8,7 @@
 # Formatting is done in black: https://pypi.org/project/black/
 
 # To do:
+# - MitMProxy
 # - Vuln categories
 # - Exam step categories
 # - Keep track of last X

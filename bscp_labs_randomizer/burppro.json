@@ -471,6 +471,14 @@
                 "string_match":"<title>.*</title>"
             },
             {
+                "comment":"Replace LINK",
+                "enabled":true,
+                "is_simple_match":false,
+                "rule_type":"response_body",
+                "string_match":"<a class=link-back href='https://portswigger.net/web-security/[^\\n]*'>",
+                "string_replace":"<a class=link-back href='https://portswigger.net/web-security/'>"
+            },
+            {
                 "comment":"Remove HEADER",
                 "enabled":true,
                 "is_simple_match":false,
