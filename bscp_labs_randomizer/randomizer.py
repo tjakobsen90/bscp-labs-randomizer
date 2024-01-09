@@ -8,6 +8,7 @@
 # Formatting is done in black: https://pypi.org/project/black/
 
 # To do:
+# - point to deny/db file
 # - MitMProxy
 # - Vuln categories
 # - Exam step categories
@@ -95,16 +96,11 @@ def update():
     labs_urls = f"{url_main}/web-security/all-labs"
     r_labs = requests.get(labs_urls)
     labs_links = []
-    numb = 0
     if r_labs.status_code == 200:
         soup = BeautifulSoup(r_labs.text, "html.parser")
         elements = soup.find_all(class_="widgetcontainer-lab-link")
-
         for element in elements:
-            if numb == 5:
-                break
             labs_links.append(element.find_all("a")[0].get("href"))
-            numb += 1
     else:
         logging.error(f"The URL {labs_urls} is unavailable")
         logging.error(f"Status code: {r_labs.status_code}")

@@ -6,7 +6,12 @@ authors = ["Tijmen Desktop <tjakobsen@live.nl>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
+requests = "^2.31.0"
+mitmproxy = "^10.2.1"
+argparse = "^1.4.0"
+logging = "^0.4.9.6"
+bs4 = "^0.0.1"
 
 
 [build-system]
