@@ -321,7 +321,7 @@
                 "use_user_options":true
             },
             "negotiation":{
-                "allow_unsafe_renegotiation":false,
+                "allow_unsafe_renegotiation":true,
                 "disable_ssl_session_resume":false,
                 "enabled_ciphers":[],
                 "enabled_protocols":[],
@@ -464,27 +464,28 @@
         "match_replace_disable_out_of_scope":false,
         "match_replace_rules":[
             {
-                "comment":"Remove TITLE",
+                "comment":"<a class=link-back href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>",
                 "enabled":true,
                 "is_simple_match":false,
                 "rule_type":"response_body",
-                "string_match":"<title>.*</title>"
+                "string_match":"Replace LINK",
+                "string_replace":"<a class=link-back href='[^\\n]*'>"
             },
             {
-                "comment":"Replace LINK",
+                "comment":"<title>BSCP Randomizer</title>",
                 "enabled":true,
                 "is_simple_match":false,
                 "rule_type":"response_body",
-                "string_match":"<a class=link-back href='https://portswigger.net/web-security/[^\\n]*'>",
-                "string_replace":"<a class=link-back href='https://portswigger.net/web-security/'>"
+                "string_match":"Replace Title",
+                "string_replace":"<title>.*</title>"
             },
             {
-                "comment":"Remove HEADER",
+                "comment":"<h2>BSCP Randomizer</h2>",
                 "enabled":true,
                 "is_simple_match":false,
                 "rule_type":"response_body",
-                "string_match":"<div class=title-container>.*<h2>.*</h2>",
-                "string_replace":"<div class=title-container>"
+                "string_match":"Replace HEADER",
+                "string_replace":"<h2>.*</h2>"
             },
             {
                 "comment":"Emulate IE",
@@ -597,7 +598,24 @@
                 "enable_http2":true,
                 "listen_mode":"loopback_only",
                 "listener_port":8080,
+                "running":false,
+                "use_custom_tls_protocols":false
+            },
+            {
+                "certificate_mode":"per_host",
+                "custom_tls_protocols":[
+                    "TLSv1",
+                    "TLSv1.1",
+                    "TLSv1.2",
+                    "TLSv1.3"
+                ],
+                "enable_http2":true,
+                "listen_mode":"loopback_only",
+                "listener_port":8081,
+                "redirect_to_host":"127.0.0.1",
+                "redirect_to_port":8080,
                 "running":true,
+                "support_invisible_proxying":true,
                 "use_custom_tls_protocols":false
             }
         ],

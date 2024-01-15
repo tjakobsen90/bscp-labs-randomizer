@@ -21,6 +21,7 @@ import time
 import json
 import sys
 import random
+import os
 from bs4 import BeautifulSoup
 
 logging.basicConfig(
@@ -33,7 +34,7 @@ parser = argparse.ArgumentParser(
     prog="randomizer",
     description="Returns a random BSCP lab that is applicable for the BSCP exam",
 )
-parser.add_argument("option", help="random, list or update")
+parser.add_argument("option", help="random, list, update or runproxy")
 args = parser.parse_args()
 
 
@@ -43,6 +44,7 @@ def main(args):
         "random": {"func": random_lab},
         "list": {"func": list},
         "update": {"func": update},
+        "runproxy": {"func": runproxy}
     }
 
     if actions.get(args.option)["func"]():
@@ -149,6 +151,9 @@ def update():
 
     return True
 
+def runproxy():
+    args = '-k --modify-body ":~s:<h2>.*</h2>:<h2>BSCP Randomizer</h2>" --modify-body ":~s:<title>.*</title>:<title>BSCP Randomizer</title>" --modify-body ":~s:<title>.*</title>:<title>BSCP Randomizer</title>" --modify-body ":~s:<a class=link-back href=\'[^\n]*\'>:<a class=link-back href=\'https://www.youtube.com/watch?v=dQw4w9WgXcQ\'>"'
+    os.system(f"mitmdump {args}")
 
 def encode_all(string):
     return "".join("%{0:0>2x}".format(ord(char)) for char in string)
