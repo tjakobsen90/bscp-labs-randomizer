@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 # https://github.com/tjakobsen90/bscp-labs-randomizer
 
-# Only randomize mystery labs that are applicable for the BSCP exam
+# Only randomize labs that are applicable for the BSCP exam
 # For example, this does not include the labs where you need to get the leather jacket
 # Do keep in mind that I strongly recommend to do these 'skipped' labs regardless
-
 # Formatting is done in black: https://pypi.org/project/black/
 
 # To do:
 # - point to deny/db file
-# - MitMProxy
 # - Vuln categories
 # - Exam step categories
 # - Keep track of last X
@@ -22,6 +20,7 @@ import json
 import sys
 import random
 import os
+import signal
 from bs4 import BeautifulSoup
 
 logging.basicConfig(
@@ -44,7 +43,7 @@ def main(args):
         "random": {"func": random_lab},
         "list": {"func": list},
         "update": {"func": update},
-        "runproxy": {"func": runproxy}
+        "runproxy": {"func": runproxy},
     }
 
     if actions.get(args.option)["func"]():
@@ -151,12 +150,22 @@ def update():
 
     return True
 
+
 def runproxy():
+    signal.signal(signal.SIGINT, signal_handler)
+    logging.info("Starting the proxy")
+    logging.info("To exit press CTRL+C")
     args = '-k --modify-body ":~s:<h2>.*</h2>:<h2>BSCP Randomizer</h2>" --modify-body ":~s:<title>.*</title>:<title>BSCP Randomizer</title>" --modify-body ":~s:<title>.*</title>:<title>BSCP Randomizer</title>" --modify-body ":~s:<a class=link-back href=\'[^\n]*\'>:<a class=link-back href=\'https://www.youtube.com/watch?v=dQw4w9WgXcQ\'>"'
     os.system(f"mitmdump {args}")
 
+
 def encode_all(string):
     return "".join("%{0:0>2x}".format(ord(char)) for char in string)
+
+
+def signal_handler(sig, frame):
+    print("Exiting the proxy...")
+    sys.exit(0)
 
 
 if __name__ == "__main__":
