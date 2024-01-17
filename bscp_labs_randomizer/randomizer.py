@@ -1,79 +1,99 @@
 #!/usr/bin/python3
 # https://github.com/tjakobsen90/bscp-labs-randomizer
 
-# Only randomize labs that are applicable for the BSCP exam
-# For example, this does not include the labs where you need to get the leather jacket
-# Do keep in mind that I strongly recommend to do these 'skipped' labs regardless
-# Formatting is done in black: https://pypi.org/project/black/
-
-# To do:
-# - point to deny/db file
-# - Vuln categories
-# - Exam step categories
-# - Keep track of last X
-
 import argparse
-import requests
-import logging
-import time
 import json
-import sys
-import random
+import logging
 import os
+import random
+import requests
 import signal
+import sys
+import time
 from bs4 import BeautifulSoup
+from pathlib import Path
 
+# Global variables
+dbfile = "database.dict"
+denyfile = "deny.list"
+
+# Logging configuration
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[logging.StreamHandler(sys.stdout)],
 )
 
+
+# parser.add_argument("random", help="Return a random lab from the database")
+# parser.add_argument("list", help="Show all labs in the database")
+# parser.add_argument("update", help="Update the database of labs")
+# parser.add_argument("proxy", help="Run mitmdump on localhost:8080")
+# --file
+
+# Argument parser
 parser = argparse.ArgumentParser(
     prog="randomizer",
     description="Returns a random BSCP lab that is applicable for the BSCP exam",
 )
-parser.add_argument("option", help="random, list, update or runproxy")
-args = parser.parse_args()
+parser.add_argument("option", help="random, list, update or proxy")
+parser.add_argument("-s", "--show", action="store_true", help="Show corresponding number of the random lab")
+parser.add_argument("-p", "--proxy", action="store_true", help="Run mitmdump on localhost:8080")
 
+args = parser.parse_args()
 
 def main(args):
     logging.info("BSCP Labs Randomizer")
+
     actions = {
         "random": {"func": random_lab},
-        "list": {"func": list},
-        "update": {"func": update},
-        "runproxy": {"func": runproxy},
+        "list": {"func": list_database},
+        "update": {"func": update_database},
+        "proxy": {"func": proxy_start},
     }
 
-    if actions.get(args.option)["func"]():
-        logging.info("Good luck!")
+    if args.option in actions.keys():
+        logging.info(f"Your choice: {args.option}")
+        actions.get(args.option)["func"](args)
+        logging.info("Goodbye!")
         quit()
     else:
+        logging.warning("No valid option provided, use -h or --help")
         quit()
 
 
-def random_lab():
+# Returns a random encoded lab URL
+def random_lab(args):
     try:
-        with open("database.dict", "r") as file:
+        with open(dbfile, "r") as file:
             urls = json.load(file)
     except Exception as e:
         logging.warning("Database file unavailable, did you create it with 'update'?")
         logging.warning(f"Message: {e}")
         return False
 
-    # random needs improvement
-    url_random = random.sample(urls.items(), 1)[0][1].split("%2f")
-    for i in range(1, len(url_random)):
-        url_random[i] = encode_all(url_random[i])
-        url_encoded = "%2f".join(map(str, url_random))
-    logging.info(f"The URL is: {url_encoded}")
+    random_choice = random.choice(list(urls.items()))
+    random_url = random_choice[1].split("%2f")
+    random_number = random_choice[0]
+
+    if args.show:
+        logging.info(f"Number: {random_number}")
+
+    for i in range(1, len(random_url)):
+        random_url[i] = encode_all(random_url[i])
+        url_encoded = "%2f".join(map(str, random_url))
+    logging.info(f"URL: {url_encoded}")
     logging.info("Make sure you are logged in, copy/paste the URL to start")
+    logging.info("Good luck!")
+
+    if args.proxy:
+        proxy_start()
 
     return True
 
 
-def list():
+# Shows all entries in the database file
+def list_database():
     try:
         with open("database.dict", "r") as file:
             urls = json.load(file)
@@ -89,7 +109,8 @@ def list():
     return True
 
 
-def update():
+# Creates and overwrites the database file
+def update_database():
     logging.info("Get some coffee, this will take a while")
 
     url_main = "https://portswigger.net"
@@ -108,7 +129,7 @@ def update():
         return False
 
     try:
-        with open("deny.list", "r") as file:
+        with open(denyfile, "r") as file:
             denylist = file.read().splitlines()
     except Exception as e:
         logging.warning("Deny file unavailable")
@@ -151,22 +172,30 @@ def update():
     return True
 
 
-def runproxy():
+# Run the mitmdump command to alter the HTTP traffic
+def proxy_start():
     signal.signal(signal.SIGINT, signal_handler)
     logging.info("Starting the proxy")
     logging.info("To exit press CTRL+C")
     args = '-k --modify-body ":~s:<h2>.*</h2>:<h2>BSCP Randomizer</h2>" --modify-body ":~s:<title>.*</title>:<title>BSCP Randomizer</title>" --modify-body ":~s:<title>.*</title>:<title>BSCP Randomizer</title>" --modify-body ":~s:<a class=link-back href=\'[^\n]*\'>:<a class=link-back href=\'https://www.youtube.com/watch?v=dQw4w9WgXcQ\'>"'
-    os.system(f"mitmdump {args}")
+    try:
+        os.system(f"mitmdump {args}")
+    except Exception as e:
+        logging.error("Can't start mitmdump")
+        logging.error(f"Message: {e}")
 
 
+# Encode characters URL style
 def encode_all(string):
     return "".join("%{0:0>2x}".format(ord(char)) for char in string)
 
 
+# Capture key strokes (CTRL+C)
 def signal_handler(sig, frame):
     print("Exiting the proxy...")
     sys.exit(0)
 
 
+# Run me :)
 if __name__ == "__main__":
     main(args)
