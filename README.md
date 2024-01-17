@@ -15,3 +15,15 @@ Optional, if you prefer FireFox over Chromium:
 - [FoxyProxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
 
 
+
+# Formatting 
+Formatting is done in black: https://pypi.org/project/black/
+`$ python -m pip install black`
+`$ black randomizer.py`
+
+# To do:
+- point to deny/db file
+- Add proxy switch
+- add vuln categories switch
+- Exam step categories
+- Keep track of last X
