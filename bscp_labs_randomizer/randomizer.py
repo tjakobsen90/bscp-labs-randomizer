@@ -11,11 +11,10 @@ import signal
 import sys
 import time
 from bs4 import BeautifulSoup
-from pathlib import Path
 
 # Global variables
-dbfile = "database.dict"
-denyfile = "deny.list"
+g_dbfile = "database.dict"
+g_denyfile = "deny.list"
 
 # Logging configuration
 logging.basicConfig(
@@ -24,59 +23,104 @@ logging.basicConfig(
     handlers=[logging.StreamHandler(sys.stdout)],
 )
 
-
-# parser.add_argument("random", help="Return a random lab from the database")
-# parser.add_argument("list", help="Show all labs in the database")
-# parser.add_argument("update", help="Update the database of labs")
-# parser.add_argument("proxy", help="Run mitmdump on localhost:8080")
-# --file
-
 # Argument parser
 parser = argparse.ArgumentParser(
     prog="randomizer",
     description="Returns a random BSCP lab that is applicable for the BSCP exam",
+    usage="%(prog)s action [options]",
+    formatter_class=argparse.RawTextHelpFormatter,
 )
-parser.add_argument("option", help="random, list, update or proxy")
-parser.add_argument("-s", "--show", action="store_true", help="Show corresponding number of the random lab")
-parser.add_argument("-p", "--proxy", action="store_true", help="Run mitmdump on localhost:8080")
+parser.add_argument(
+    "action",
+    help="""random: Return a random lab from the database
+list: Show all labs in the database
+update: Update the database of labs
+proxy: Run mitmdump on localhost:8080""",
+)
 
+parser.add_argument(
+    "-s",
+    "--show",
+    action="store_true",
+    help="""Show corresponding number of the random lab
+Works with: random""",
+)
+parser.add_argument(
+    "-p",
+    "--proxy",
+    action="store_true",
+    help="""Run mitmdump on localhost:8080
+Works with: random""",
+)
+parser.add_argument(
+    "-f",
+    "--db-file",
+    type=argparse.FileType("r"),
+    help="""Point to the database file to use
+Works with: list and update""",
+)
+parser.add_argument(
+    "-d",
+    "--deny-file",
+    type=argparse.FileType("r"),
+    help="""Point to the deny file to use
+Works with: update""",
+)
 args = parser.parse_args()
+
 
 def main(args):
     logging.info("BSCP Labs Randomizer")
+    logging.info(f"Your choice: {args.action}")
 
-    actions = {
-        "random": {"func": random_lab},
-        "list": {"func": list_database},
-        "update": {"func": update_database},
-        "proxy": {"func": proxy_start},
-    }
+    if (
+        args.db_file
+        and args.deny_file
+        and os.path.exists(args.db_file)
+        and os.path.exists(args.db_file)
+    ):
+        logging.error("Invalid paths")
+        quit()
 
-    if args.option in actions.keys():
-        logging.info(f"Your choice: {args.option}")
-        actions.get(args.option)["func"](args)
-        logging.info("Goodbye!")
-        quit()
-    else:
-        logging.warning("No valid option provided, use -h or --help")
-        quit()
+    match args.action:
+        case "random":
+            random_lab(args.db_file, args.show, args.proxy)
+        case "list":
+            list_database(args.db_file)
+        case "update":
+            update_database(args.db_file, args.deny_file)
+        case "proxy":
+            proxy_start()
+        case _:
+            logging.warning("No valid option provided, use -h or --help")
+            quit()
+
+    logging.info("Goodbye!")
 
 
 # Returns a random encoded lab URL
-def random_lab(args):
+def random_lab(db, show, proxy):
     try:
-        with open(dbfile, "r") as file:
-            urls = json.load(file)
+        if db:
+            urls = json.load(db)
+        else:
+            with open(g_dbfile, "r") as file:
+                urls = json.load(file)
     except Exception as e:
         logging.warning("Database file unavailable, did you create it with 'update'?")
         logging.warning(f"Message: {e}")
         return False
 
-    random_choice = random.choice(list(urls.items()))
-    random_url = random_choice[1].split("%2f")
-    random_number = random_choice[0]
+    try:
+        random_choice = random.choice(list(urls.items()))
+        random_url = random_choice[1].split("%2f")
+        random_number = random_choice[0]
+    except Exception as e:
+        logging.error("Invalid database file")
+        logging.error(f"Message: {e}")
+        return False
 
-    if args.show:
+    if show:
         logging.info(f"Number: {random_number}")
 
     for i in range(1, len(random_url)):
@@ -86,31 +130,39 @@ def random_lab(args):
     logging.info("Make sure you are logged in, copy/paste the URL to start")
     logging.info("Good luck!")
 
-    if args.proxy:
+    if proxy:
         proxy_start()
 
     return True
 
 
 # Shows all entries in the database file
-def list_database():
+def list_database(db):
     try:
-        with open("database.dict", "r") as file:
-            urls = json.load(file)
+        if db:
+            urls = json.load(db)
+        else:
+            with open(g_dbfile, "r") as file:
+                urls = json.load(file)
     except Exception as e:
         logging.warning("Database file unavailable, did you create it with 'update'?")
         logging.warning(f"Message: {e}")
         return False
 
-    logging.info("The current entries in the database are:")
-    for number, url in urls.items():
-        logging.info(f"{number}: {url}")
+    try:
+        logging.info("The current entries in the database are:")
+        for number, url in urls.items():
+            logging.info(f"{number}: {url}")
+    except Exception as e:
+        logging.error("Invalid database file")
+        logging.error(f"Message: {e}")
+        return False
 
     return True
 
 
 # Creates and overwrites the database file
-def update_database():
+def update_database(db, deny):
     logging.info("Get some coffee, this will take a while")
 
     url_main = "https://portswigger.net"
@@ -122,15 +174,19 @@ def update_database():
         soup = BeautifulSoup(r_labs.text, "html.parser")
         elements = soup.find_all(class_="widgetcontainer-lab-link")
         for element in elements:
-            labs_links.append(element.find_all("a")[0].get("href"))
+            if "label-purple-small" not in element.find_all("span")[1].get("class"):
+                labs_links.append(element.find_all("a")[0].get("href"))
     else:
         logging.error(f"The URL {labs_urls} is unavailable")
         logging.error(f"Status code: {r_labs.status_code}")
         return False
 
     try:
-        with open(denyfile, "r") as file:
-            denylist = file.read().splitlines()
+        if deny:
+            denylist = deny.read().splitlines()
+        else:
+            with open(g_denyfile, "r") as file:
+                denylist = file.read().splitlines()
     except Exception as e:
         logging.warning("Deny file unavailable")
         logging.warning(f"Message: {e}")
@@ -162,8 +218,11 @@ def update_database():
         dict_launches[number] = f"{url_main}{launch}"
         number += 1
     try:
-        with open("database.dict", "w") as file:
-            json.dump(dict_launches, file)
+        if db:
+            json.dump(dict_launches, db)
+        else:
+            with open(g_dbfile, "w") as file:
+                json.dump(dict_launches, file)
     except Exception as e:
         logging.error("Can't create database file")
         logging.error(f"Message: {e}")
@@ -177,9 +236,9 @@ def proxy_start():
     signal.signal(signal.SIGINT, signal_handler)
     logging.info("Starting the proxy")
     logging.info("To exit press CTRL+C")
-    args = '-k --modify-body ":~s:<h2>.*</h2>:<h2>BSCP Randomizer</h2>" --modify-body ":~s:<title>.*</title>:<title>BSCP Randomizer</title>" --modify-body ":~s:<title>.*</title>:<title>BSCP Randomizer</title>" --modify-body ":~s:<a class=link-back href=\'[^\n]*\'>:<a class=link-back href=\'https://www.youtube.com/watch?v=dQw4w9WgXcQ\'>"'
+    flags = '-k --modify-body ":~s:<h2>.*</h2>:<h2>BSCP Randomizer</h2>" --modify-body ":~s:<title>.*</title>:<title>BSCP Randomizer</title>" --modify-body ":~s:<title>.*</title>:<title>BSCP Randomizer</title>" --modify-body ":~s:<a class=link-back href=\'[^\n]*\'>:<a class=link-back href=\'https://www.youtube.com/watch?v=dQw4w9WgXcQ\'>"'
     try:
-        os.system(f"mitmdump {args}")
+        os.system(f"mitmdump {flags}")
     except Exception as e:
         logging.error("Can't start mitmdump")
         logging.error(f"Message: {e}")

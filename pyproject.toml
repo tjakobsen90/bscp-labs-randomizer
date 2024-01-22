@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bscp-labs-randomizer"
-version = "0.1.0"
+version = "1.0.0"
 description = "Only randomize labs that are applicable for the BSCP exam. For example, this does not include the labs where you need to get the leather jacket. Do keep in mind that I strongly recommend to do these 'skipped' labs regardless."
 authors = ["TJakobsen <tjakobsen@the-s-unit.nl>"]
 readme = "README.md"
