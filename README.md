@@ -1,5 +1,5 @@
 # Description
-Only randomize mystery labs that are applicable for the BSCP exam. For example, this does not include the labs where you need to get the leather jacket or labs of expert difficulty.
+Only randomize labs that are applicable for the BSCP exam. For example, this does not include the labs where you need to get the leather jacket or labs of expert difficulty.
 The [mystery lab](https://portswigger.net/web-security/mystery-lab-challenge) has given me these unwanted labs very often. So I decided to use my time wisely and create a tool that serves only labs that I deem useful.
 
 # Disclaimer
@@ -43,7 +43,7 @@ Happy hacking!
 - When creating the database it is not possible to appoint a location
 
 # Formatting 
-Formatting is done in black: https://pypi.org/project/black/
+Formatting is done in [black](https://pypi.org/project/black/)
 
 `$ python -m pip install black`
 
