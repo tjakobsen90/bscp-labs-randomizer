@@ -25,15 +25,13 @@ Install the dependencies:
 
 # Running
 
-`$ poetry run ./bscp_labs_randomizer/randomizer.py --help`
-
-`$ poetry run ./bscp_labs_randomizer/randomizer.py update`
-
-`$ poetry run ./bscp_labs_randomizer/randomizer.py list`
-
-`$ poetry run ./bscp_labs_randomizer/randomizer.py random -p`
-
-`$ burpsuite --project-file=randomizer.json`
+```
+$ poetry run ./bscp_labs_randomizer/randomizer.py --help
+$ poetry run ./bscp_labs_randomizer/randomizer.py update
+$ poetry run ./bscp_labs_randomizer/randomizer.py list
+$ poetry run ./bscp_labs_randomizer/randomizer.py random -p
+$ burpsuite --project-file=randomizer.json
+```
 
 Now copy the (encoded) URL that was generated and put it in the Burp browser (or Firefox).
 Happy hacking!
