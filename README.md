@@ -5,7 +5,7 @@ The [mystery lab](https://portswigger.net/web-security/mystery-lab-challenge) ha
 The tool exists out of three parts:
 - The Burp project file; Alters data in the HTTP traffic to hide the lab specific information like SQLi or XSS.
 - Mitmdump; Alters data in the HTTP traffic to hide the lab specific information like SQLi or XSS.
-- randomizer.py; this will gather all 'relevant' labs, return one at random and URL encoded.
+- randomizer.py; this will gather all 'relevant' labs, return one at random and URL encode it to hide lab specific information.
 
 # Disclaimer
 Do keep in mind that I strongly recommend to do these 'skipped' labs regardless. Do *NOT* think this tool will be the only resource you need for the exam. This tool helps you to focus on the exam, it will not teach you the actual skill needed.
