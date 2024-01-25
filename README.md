@@ -50,6 +50,7 @@ Happy hacking!
 # Formatting 
 Formatting is done in [black](https://pypi.org/project/black/)
 
-`$ python -m pip install black`
-
-`$ black randomizer.py`
+```
+$ python -m pip install black
+$ black randomizer.py
+```
