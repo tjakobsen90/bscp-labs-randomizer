@@ -112,7 +112,8 @@ def random_lab(db, show, proxy):
         return False
 
     try:
-        random_choice = random.choice(list(urls.items()))
+        random_category = random.choice(list(urls.values()))
+        random_choice = random.choice(list(random_category.items()))
         random_url = random_choice[1].split("%2f")
         random_number = random_choice[0]
     except Exception as e:
@@ -126,6 +127,7 @@ def random_lab(db, show, proxy):
     for i in range(1, len(random_url)):
         random_url[i] = encode_all(random_url[i])
         url_encoded = "%2f".join(map(str, random_url))
+
     logging.info(f"URL: {url_encoded}")
     logging.info("Make sure you are logged in, copy/paste the URL to start")
     logging.info("Good luck!")
@@ -151,8 +153,10 @@ def list_database(db):
 
     try:
         logging.info("The current entries in the database are:")
-        for number, url in urls.items():
-            logging.info(f"{number}: {url}")
+        for category, links in urls.items():
+            logging.info(f"{category}:")
+            for number, url in links.items():
+                logging.info(f"{number}: {url}")
     except Exception as e:
         logging.error("Invalid database file")
         logging.error(f"Message: {e}")
@@ -171,15 +175,16 @@ def update_database(db, deny):
     r_labs = requests.get(labs_urls)
     labs_links = []
     if r_labs.status_code == 200:
-        soup = BeautifulSoup(r_labs.text, "html.parser")
-        elements = soup.find_all(class_="widgetcontainer-lab-link")
-        for element in elements:
-            if "label-purple-small" not in element.find_all("span")[1].get("class"):
-                labs_links.append(element.find_all("a")[0].get("href"))
+        soup_all_labs = BeautifulSoup(r_labs.text, "html.parser")
     else:
         logging.error(f"The URL {labs_urls} is unavailable")
         logging.error(f"Status code: {r_labs.status_code}")
         return False
+
+    elements = soup_all_labs.find_all(class_="widgetcontainer-lab-link")
+    for element in elements:
+        if "label-purple-small" not in element.find_all("span")[1].get("class"):
+            labs_links.append(element.find_all("a")[0].get("href"))
 
     try:
         if deny:
@@ -201,8 +206,8 @@ def update_database(db, deny):
     for allow in allowlist:
         r_launches = requests.get(f"{url_main}{allow}")
         if r_launches.status_code == 200:
-            soup = BeautifulSoup(r_launches.text, "html.parser")
-            elements = soup.find_all("a", class_="button-orange")
+            soup_lab = BeautifulSoup(r_launches.text, "html.parser")
+            elements = soup_lab.find_all("a", class_="button-orange")
             for element in elements:
                 launches.append(element["href"])
         else:
@@ -210,13 +215,23 @@ def update_database(db, deny):
             logging.error(f"Status code: {r_launches.status_code}")
             return False
         # I don"t want an angry PortSwigger
-        time.sleep(2)
+        time.sleep(1)
 
     dict_launches = {}
+    categories = []
+    for launch in launches:
+        categories.append(launch.split("%2f")[2])
+    categories = list(set(categories))
+    
+    for category in categories:
+        dict_launches.update({category : {}})
+
     number = 0
     for launch in launches:
-        dict_launches[number] = f"{url_main}{launch}"
+        category = launch.split("%2f")[2]
+        dict_launches[category].update({number : f"{url_main}{launch}"})
         number += 1
+
     try:
         if db:
             json.dump(dict_launches, db)
